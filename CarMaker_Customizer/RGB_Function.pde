@@ -1,7 +1,7 @@
 //X Position of the input boxes
 int xP = 60;
 //Y position of the input boxes
-int yP = 100;
+int yP = 130;
 int yP1 = yP+60;
 int yP2 = yP1+60;
 //Length of the input boxes
@@ -45,4 +45,9 @@ void boxesRGB () {
   fill(255);
   textSize(30); 
   text("Car Color", 10, yP-10);
+
+  //CarMaker Title
+  fill(255);
+  textSize(80); 
+  text("Car Maker 9000", 0, 70);
 }
