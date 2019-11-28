@@ -34,7 +34,15 @@ void boxesRGB () {
   textSize(60); 
   text("B", 10, yP2+hP); 
 
+  //Quick test to change the Car Color
+  cCRed = 204;
+  cCGreen = 0;
+  cCBlue = 255;
+
   //Little Square which indicates which color the car has
   fill(cCRed, cCGreen, cCBlue);
-  rect(300, 100, 50, 50);
+  rect(xP+lP+10, yP-50, 50, 50);
+  fill(255);
+  textSize(30); 
+  text("Car Color", 10, yP-10);
 }
