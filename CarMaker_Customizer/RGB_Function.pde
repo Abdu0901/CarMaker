@@ -16,7 +16,7 @@ void boxesRGB () {
   //Big red R text
   fill(255, 0, 0);
   textSize(60); 
-  text("R", 10, yP+hP); 
+  text("R", xP-50, yP+hP); 
 
   //Green Input Box
   fill(255);
@@ -24,7 +24,7 @@ void boxesRGB () {
   //Big green G text
   fill(0, 255, 0);
   textSize(60); 
-  text("G", 10, yP1+hP); 
+  text("G", xP-50, yP1+hP); 
 
   //Blue Input Box
   fill(255);
@@ -32,7 +32,7 @@ void boxesRGB () {
   //Big blue B text
   fill(0, 0, 255);
   textSize(60); 
-  text("B", 10, yP2+hP); 
+  text("B", xP-50, yP2+hP); 
 
   //Quick test to change the Car Color
   cCRed = 204;
@@ -44,7 +44,7 @@ void boxesRGB () {
   rect(xP+lP+10, yP-50, 50, 50);
   fill(255);
   textSize(30); 
-  text("Car Color", 10, yP-10);
+  text("Car Color", xP-50, yP-10);
 
   //CarMaker Title
   fill(255);
