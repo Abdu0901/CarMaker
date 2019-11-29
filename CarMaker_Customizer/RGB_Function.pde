@@ -1,4 +1,3 @@
-//test
 //X Position of the input boxes
 int xP = 60;
 //Y position of the input boxes
@@ -6,7 +5,7 @@ int yP = 130;
 int yP1 = yP+60;
 int yP2 = yP1+60;
 //Length of the input boxes
-int lP = 100;
+int lP = 130;
 //Height of the input boxes
 int hP = 50;
 
@@ -18,6 +17,8 @@ void boxesRGB () {
   fill(255, 0, 0);
   textSize(60); 
   text("R", xP-50, yP+hP); 
+  
+  text("888", xP, yP+hP-2);
 
   //Green Input Box
   fill(255);
