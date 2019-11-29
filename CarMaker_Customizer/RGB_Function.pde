@@ -18,7 +18,7 @@ void boxesRGB () {
   textSize(60); 
   text("R", xP-50, yP+hP); 
   fill(0);
-  text("888", xP, yP+hP-2);
+  text(inputR, xP, yP+hP-2);
 
   //Green Input Box
   fill(255);

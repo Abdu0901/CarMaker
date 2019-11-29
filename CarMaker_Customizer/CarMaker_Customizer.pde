@@ -9,6 +9,10 @@ int cCBlue = 0;
 int num = 0;
 String str_num = "";
 
+int numR = 0;
+String inputR = "";
+int maxTextLength = 3;
+
 void setup() {
   //Size of the screen
   size(1000, 500);
@@ -23,18 +27,34 @@ void draw() {
 //Function to detect mousepressed in a box
 void mousePressed() {
   if (mouseX >= xP && mouseX <= xP+lP && mouseY >= yP && mouseY <= yP+hP) {
-      println("Red Box Clicked");
-    }
+    println("Red Box Clicked");
   }
+}
 
 //Function to detect keypressed on numbers and input them. Currently unfinished 
 void keyPressed() {
-  if ( key >= '0' && key <= '9' ) {
-    str_num += key;
+  if ( key >= '0' && key <= '9' && maxTextLength > inputR.length()) {
+    inputR += key;
   }
   if ( key == ENTER || key == RETURN ) {
-    num = int( str_num );
-    str_num = "";
-    println( num );
+    numR = int( inputR );
+    inputR = "";
+    println( numR );
   }
 }
+
+
+//Copy of keypressed
+/*
+//Function to detect keypressed on numbers and input them. Currently unfinished 
+ void keyPressed() {
+ if ( key >= '0' && key <= '9' ) {
+ str_num += key;
+ }
+ if ( key == ENTER || key == RETURN ) {
+ num = int( str_num );
+ str_num = "";
+ println( num );
+ }
+ }
+ */
