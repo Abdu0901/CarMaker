@@ -11,6 +11,8 @@ String str_num = "";
 
 int numR = 0;
 String inputR = "";
+String inputG = "";
+String inputB = "";
 int maxTextLength = 3;
 
 void setup() {

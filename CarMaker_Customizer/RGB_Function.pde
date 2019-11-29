@@ -28,7 +28,7 @@ void boxesRGB () {
   textSize(60); 
   text("G", xP-50, yP1+hP); 
   fill(0);
-  text("888", xP, yP1+hP-2);
+  text(inputG, xP, yP1+hP-2);
 
   //Blue Input Box
   fill(255);
@@ -38,7 +38,7 @@ void boxesRGB () {
   textSize(60); 
   text("B", xP-50, yP2+hP); 
   fill(0);
-  text("888", xP, yP2+hP-2);
+  text(inputB, xP, yP2+hP-2);
 
   //Quick test to change the Car Color
   cCRed = 204;
