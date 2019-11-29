@@ -19,6 +19,13 @@ void setup() {
 void draw() {
   boxesRGB();
 }
+//rect(xP, yP, lP, hP);
+//Function to detect mousepressed in a box
+void mousePressed() {
+  if (mouseX >= xP && mouseX <= xP+lP && mouseY >= yP && mouseY <= yP+hP) {
+      println("Red Box Clicked");
+    }
+  }
 
 //Function to detect keypressed on numbers and input them. Currently unfinished 
 void keyPressed() {
