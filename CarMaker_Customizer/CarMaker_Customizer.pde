@@ -1,18 +1,14 @@
 //Abdullah, Julius and Sebastian 3D2. Programming CarMaker Project.
 
 //3 different integers for each of the carColor's RGB values
-int cCRed = 0;
-int cCGreen = 0;
-int cCBlue = 0;
+int cCRed = 0, cCGreen = 0, cCBlue = 0;
 
 //Used for the void Keypressed function
 int num = 0;
 String str_num = "";
 
 int numR = 0;
-String inputR = "";
-String inputG = "";
-String inputB = "";
+String inputR = "", inputG = "", inputB = "";
 int maxTextLength = 3;
 
 boolean isBoxInFocus = false;
