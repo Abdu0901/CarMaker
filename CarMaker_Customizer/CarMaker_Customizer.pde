@@ -15,6 +15,8 @@ String inputG = "";
 String inputB = "";
 int maxTextLength = 3;
 
+boolean isBoxInFocus = false;
+
 void setup() {
   //Size of the screen
   size(1000, 500);
