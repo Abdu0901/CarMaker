@@ -15,11 +15,13 @@ void setup() {
   size(1000, 500);
   //The Screens background color
   background(50);
-  constrain(numR, 0, 255);
 }
 
 void draw() {
   boxesRGB();
+  //Car background box
+  fill(255);
+  rect(350,170,600,300);
 }
 
 //Function to detect mousepressed in a box
