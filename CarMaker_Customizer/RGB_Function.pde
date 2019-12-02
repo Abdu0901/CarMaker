@@ -18,7 +18,13 @@ void boxesRGB () {
   textSize(60); 
   text("R", xP-50, yP+hP); 
   fill(0);
-  text(inputR, xP, yP+hP-2);
+  text(stringR, xP, yP+hP-2);
+  if (int(stringR) < 0) {
+    stringR="0";
+  } else if (int(stringR) > 255) {
+    stringR="255";
+  }
+
 
   //Green Input Box
   fill(255);
@@ -28,7 +34,12 @@ void boxesRGB () {
   textSize(60); 
   text("G", xP-50, yP1+hP); 
   fill(0);
-  text(inputG, xP, yP1+hP-2);
+  text(stringG, xP, yP1+hP-2);
+  if (int(stringG) < 0) {
+    stringG="0";
+  } else if (int(stringG) > 255) {
+    stringG="255";
+  }
 
   //Blue Input Box
   fill(255);
@@ -38,7 +49,13 @@ void boxesRGB () {
   textSize(60); 
   text("B", xP-50, yP2+hP); 
   fill(0);
-  text(inputB, xP, yP2+hP-2);
+  text(stringB, xP, yP2+hP-2);
+
+  if (int(stringB) < 0) {
+    stringB="0";
+  } else if (int(stringB) > 255) {
+    stringB="255";
+  }
 
   //Quick test to change the Car Color
   cCRed = 204;

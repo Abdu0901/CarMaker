@@ -5,7 +5,7 @@ int cCRed = 0, cCGreen = 0, cCBlue = 0;
 
 //Used for the void Keypressed function
 int numR = 0, numG = 0, numB = 0;
-String inputR = "", inputG = "", inputB = "";
+String stringR = "", stringG = "", stringB = "";
 int maxTextLength = 3;
 
 boolean isRBoxInFocus = false, isGBoxInFocus = false, isBBoxInFocus = false;
@@ -15,6 +15,7 @@ void setup() {
   size(1000, 500);
   //The Screens background color
   background(50);
+  constrain(numR, 0, 255);
 }
 
 void draw() {
@@ -41,36 +42,42 @@ void mousePressed() {
   }
 }
 
-//Function to detect keypressed on numbers and input them. Currently unfinished 
+//Function to input numbers into boxes
 void keyPressed() {
   if (isRBoxInFocus) {
-    if ( key >= '0' && key <= '9' && maxTextLength > inputR.length()) {
-      inputR += key;
+    if ( key >= '0' && key <= '9' && maxTextLength > stringR.length()) {
+      stringR += key;
     }
     if ( key == ENTER || key == RETURN ) {
-      numR = int( inputR );
-      inputR = "";
+      numR = constrain(int( stringR ), 0, 255);
       println( numR );
+    }
+    if (key == BACKSPACE) {
+      stringR = "";
     }
   }
   if (isGBoxInFocus) {
-    if ( key >= '0' && key <= '9' && maxTextLength > inputG.length()) {
-      inputG += key;
+    if ( key >= '0' && key <= '9' && maxTextLength > stringG.length()) {
+      stringG += key;
     }
     if ( key == ENTER || key == RETURN ) {
-      numG = int( inputG );
-      inputG = "";
+      numG = constrain(int( stringG ), 0, 255);
       println( numG );
+    }
+    if (key == BACKSPACE) {
+      stringG = "";
     }
   }
   if (isBBoxInFocus) {
-    if ( key >= '0' && key <= '9' && maxTextLength > inputB.length()) {
-      inputB += key;
+    if ( key >= '0' && key <= '9' && maxTextLength > stringB.length()) {
+      stringB += key;
     }
     if ( key == ENTER || key == RETURN ) {
-      numB = int( inputB );
-      inputB = "";
+      numB = constrain(int( stringB ), 0, 255);
       println( numB );
+    }
+    if (key == BACKSPACE) {
+      stringB = "";
     }
   }
 }
@@ -78,12 +85,12 @@ void keyPressed() {
 /*
 //Function to detect keypressed on numbers and input them. Currently unfinished 
  void keyPressed() {
- if ( key >= '0' && key <= '9' && maxTextLength > inputR.length()) {
- inputR += key;
+ if ( key >= '0' && key <= '9' && maxTextLength > stringR.length()) {
+ stringR += key;
  }
  if ( key == ENTER || key == RETURN ) {
- numR = int( inputR );
- inputR = "";
+ numR = int( stringR );
+ stringR = "";
  println( numR );
  }
  }
