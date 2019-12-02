@@ -21,7 +21,7 @@ void setup() {
 void draw() {
   boxesRGB();
 }
-//rect(xP, yP, lP, hP);
+
 //Function to detect mousepressed in a box
 void mousePressed() {
   if (mouseX >= xP && mouseX <= xP+lP && mouseY >= yP && mouseY <= yP+hP) {
@@ -81,32 +81,3 @@ void keyPressed() {
     }
   }
 }
-
-/*
-//Function to detect keypressed on numbers and input them. Currently unfinished 
- void keyPressed() {
- if ( key >= '0' && key <= '9' && maxTextLength > stringR.length()) {
- stringR += key;
- }
- if ( key == ENTER || key == RETURN ) {
- numR = int( stringR );
- stringR = "";
- println( numR );
- }
- }
- */
-
-//Copy of keypressed
-/*
-//Function to detect keypressed on numbers and input them. Currently unfinished 
- void keyPressed() {
- if ( key >= '0' && key <= '9' ) {
- str_num += key;
- }
- if ( key == ENTER || key == RETURN ) {
- num = int( str_num );
- str_num = "";
- println( num );
- }
- }
- */
