@@ -10,6 +10,11 @@ int lP = 130;
 int hP = 50;
 
 void boxesRGB () {
+  //Sets carColor to inputtet numbers
+  cCRed = numR;
+  cCGreen = numG;
+  cCBlue = numB;
+
   //Red Input Box and text
   fill(255);
   rect(xP, yP, lP, hP);
@@ -56,11 +61,6 @@ void boxesRGB () {
   } else if (int(stringB) > 255) {
     stringB="255";
   }
-
-  //Quick test to change the Car Color
-  cCRed = 204;
-  cCGreen = 0;
-  cCBlue = 255;
 
   //Little Square which indicates which color the car has
   fill(cCRed, cCGreen, cCBlue);
