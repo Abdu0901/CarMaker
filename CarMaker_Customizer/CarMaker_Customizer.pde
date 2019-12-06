@@ -1,12 +1,8 @@
 //Abdullah, Julius and Sebastian 3D2. Programming CarMaker Project.
 
 //Icons for the car types
-PImage BilIcon;
-PImage LastBilIcon;
-PImage CarTire1;
-PImage CarTire2;
-PImage LastBilTire1;
-PImage LastBilTire2;
+PImage BilIcon, LastBilIcon;
+PImage CarTire1, CarTire2, LastBilTire1, LastBilTire2;
 
 //3 different integers for each of the carColor's RGB values
 int cCRed = 255, cCGreen = 255, cCBlue = 255;
@@ -22,8 +18,7 @@ boolean isRBoxInFocus = false, isGBoxInFocus = false, isBBoxInFocus = false;
 //Highlights box when focused
 int boxHighlightR = 255, boxHighlightG = 255, boxHighlightB = 255;
 int boxHighlightC1 = 255, boxHighlightC2 = 255, boxHighlightT1 = 255, boxHighlightT2 = 255;
-int notInFocusColor = 255;
-int inFocusColor = 150;
+int notInFocusColor = 255, inFocusColor = 150;
 
 void setup() {
   BilIcon = loadImage("BilType.png");
