@@ -45,30 +45,32 @@ void draw() {
 
 //Function to detect mousepressed in a box
 void mousePressed() {
+
+  //red box
   if (mouseX >= xP && mouseX <= xP+lP && mouseY >= yP && mouseY <= yP+hP) {
     println("Red Box Clicked");
-    isRBoxInFocus = true; 
-    boxHighlightR = inFocusColor;
-    isGBoxInFocus = false;
-    boxHighlightG = notInFocusColor;
-    isBBoxInFocus = false;
-    boxHighlightB = notInFocusColor;
+    isRBoxInFocus = true; isGBoxInFocus = false; isBBoxInFocus = false;
+    boxHighlightR = inFocusColor; boxHighlightG = notInFocusColor; boxHighlightB = notInFocusColor;
+    
+    stringR = ""; //when box is clicked new colour value can be typed
+    
+    
+    //green box
   } else if (mouseX >= xP && mouseX <= xP+lP && mouseY >= yP1 && mouseY <= yP1+hP) {
     println("Green Box Clicked");
-    isRBoxInFocus = false;
-    boxHighlightR = notInFocusColor;
-    isGBoxInFocus = true;
-    boxHighlightG = inFocusColor;
-    isBBoxInFocus = false;
-    boxHighlightB = notInFocusColor;
+    isRBoxInFocus = false; isGBoxInFocus = true; isBBoxInFocus = false;
+    boxHighlightR = notInFocusColor; boxHighlightG = inFocusColor; boxHighlightB = notInFocusColor;
+
+    stringG = "";
+    
+    
+    //bluebox
   } else if (mouseX >= xP && mouseX <= xP+lP && mouseY >= yP2 && mouseY <= yP2+hP) {
     println("Blue Box Clicked");
-    isRBoxInFocus = false; 
-    boxHighlightR = notInFocusColor;
-    isGBoxInFocus = false;
-    boxHighlightG = notInFocusColor;
-    isBBoxInFocus = true;
-    boxHighlightB = inFocusColor;
+    isRBoxInFocus = false; isGBoxInFocus = false; isBBoxInFocus = true;
+    boxHighlightR = notInFocusColor; boxHighlightG = notInFocusColor; boxHighlightB = inFocusColor;
+
+    stringB = "";
   }
 }
 
@@ -83,10 +85,8 @@ void keyPressed() {
       println( numR );
       deselectHighlights();
     }
-    if (key == BACKSPACE) {
-      stringR = "";
-    }
   }
+  
   if (isGBoxInFocus) {
     if ( key >= '0' && key <= '9' && maxTextLength > stringG.length()) {
       stringG += key;
@@ -96,10 +96,8 @@ void keyPressed() {
       println( numG );
       deselectHighlights();
     }
-    if (key == BACKSPACE) {
-      stringG = "";
-    }
   }
+  
   if (isBBoxInFocus) {
     if ( key >= '0' && key <= '9' && maxTextLength > stringB.length()) {
       stringB += key;
@@ -108,9 +106,6 @@ void keyPressed() {
       numB = constrain(int( stringB ), 0, 255);
       println( numB );
       deselectHighlights();
-    }
-    if (key == BACKSPACE) {
-      stringB = "";
     }
   }
 }
