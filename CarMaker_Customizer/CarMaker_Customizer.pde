@@ -8,8 +8,8 @@ PImage CarTire1, CarTire2, LastBilTire1, LastBilTire2;
 int cCRed = 255, cCGreen = 255, cCBlue = 255;
 
 //Used for the void Keypressed function
-int numR = 255, numG = 255, numB = 255;
-String stringR = "", stringG = "", stringB = "";
+int numR = 200, numG = 200, numB = 200;
+String stringR = "200", stringG = "200", stringB = "200";
 int maxTextLength = 3;
 
 //Shows which box is in focus
