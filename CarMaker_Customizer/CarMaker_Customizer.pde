@@ -64,6 +64,7 @@ void keyPressed() {
     if ( key == ENTER || key == RETURN ) {
       numR = constrain(int( stringR ), 0, 255);
       println( numR );
+      deselectHighlights();
     }
     if (key == BACKSPACE) {
       stringR = "";
@@ -76,6 +77,7 @@ void keyPressed() {
     if ( key == ENTER || key == RETURN ) {
       numG = constrain(int( stringG ), 0, 255);
       println( numG );
+      deselectHighlights();
     }
     if (key == BACKSPACE) {
       stringG = "";
@@ -88,9 +90,19 @@ void keyPressed() {
     if ( key == ENTER || key == RETURN ) {
       numB = constrain(int( stringB ), 0, 255);
       println( numB );
+      deselectHighlights();
     }
     if (key == BACKSPACE) {
       stringB = "";
     }
   }
+}
+
+void deselectHighlights() {
+  isRBoxInFocus = false;
+  boxHighlightR = 255;
+  isRBoxInFocus = false;
+  boxHighlightG = 255;
+  isRBoxInFocus = false;
+  boxHighlightB = 255;
 }
