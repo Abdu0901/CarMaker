@@ -13,7 +13,7 @@ int cCRed = 255, cCGreen = 255, cCBlue = 255;
 
 //Used for the void Keypressed function
 int numR = 255, numG = 255, numB = 255;
-String stringR = "255", stringG = "255", stringB = "255";
+String stringR = "", stringG = "", stringB = "";
 int maxTextLength = 3;
 
 //Shows which box is in focus
