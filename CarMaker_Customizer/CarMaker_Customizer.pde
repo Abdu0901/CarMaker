@@ -22,10 +22,11 @@ void setup() {
 }
 
 void draw() {
-  boxesRGB();
   //Car background box
   fill(255);
   rect(350, 170, 600, 300);
+  boxesRGB();
+  TireAndTypes();
 }
 
 //Function to detect mousepressed in a box
