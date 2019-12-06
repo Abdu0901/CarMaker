@@ -5,16 +5,19 @@ PImage BilIcon;
 PImage LastBilIcon;
 
 //3 different integers for each of the carColor's RGB values
-int cCRed = 0, cCGreen = 0, cCBlue = 0;
+int cCRed = 255, cCGreen = 255, cCBlue = 255;
 
 //Used for the void Keypressed function
-int numR = 0, numG = 0, numB = 0;
-String stringR = "", stringG = "", stringB = "";
+int numR = 255, numG = 255, numB = 255;
+String stringR = "255", stringG = "255", stringB = "255";
 int maxTextLength = 3;
 
+//Shows which box is in focus
 boolean isRBoxInFocus = false, isGBoxInFocus = false, isBBoxInFocus = false;
 
+//Highlights box when focused
 int boxHighlightR = 255, boxHighlightG = 255, boxHighlightB = 255;
+int boxHighlightC1 = 255, boxHighlightC2 = 255, boxHighlightT1 = 255, boxHighlightT2 = 255;
 int notInFocusColor = 255;
 int inFocusColor = 150;
 
@@ -28,11 +31,13 @@ void setup() {
 }
 
 void draw() {
+  background(50);
   //Car background box
   fill(255);
   rect(350, 170, 600, 300);
   boxesRGB();
   TireAndTypes();
+  DrawCar();
 }
 
 //Function to detect mousepressed in a box

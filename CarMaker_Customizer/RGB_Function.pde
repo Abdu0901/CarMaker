@@ -29,8 +29,7 @@ void boxesRGB () {
   } else if (int(stringR) > 255) {
     stringR="255";
   }
-
-
+  
   //Green Input Box
   fill(boxHighlightG);
   rect(xP, yP1, lP, hP);
@@ -45,7 +44,7 @@ void boxesRGB () {
   } else if (int(stringG) > 255) {
     stringG="255";
   }
-
+  
   //Blue Input Box
   fill(boxHighlightB);
   rect(xP, yP2, lP, hP);
@@ -55,20 +54,19 @@ void boxesRGB () {
   text("B", xP-50, yP2+hP); 
   fill(0);
   text(stringB, xP, yP2+hP-2);
-
   if (int(stringB) < 0) {
     stringB="0";
   } else if (int(stringB) > 255) {
     stringB="255";
   }
-
+  
   //Little Square which indicates which color the car has
   fill(cCRed, cCGreen, cCBlue);
   rect(xP+lP+10, yP-50, 50, 50);
   fill(255);
   textSize(30); 
   text("Car Color", xP-50, yP-10);
-
+  
   //CarMaker Title
   fill(255);
   textSize(80); 
