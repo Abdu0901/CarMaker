@@ -3,6 +3,10 @@
 //Icons for the car types
 PImage BilIcon;
 PImage LastBilIcon;
+PImage CarTire1;
+PImage CarTire2;
+PImage LastBilTire1;
+PImage LastBilTire2;
 
 //3 different integers for each of the carColor's RGB values
 int cCRed = 255, cCGreen = 255, cCBlue = 255;
@@ -24,6 +28,10 @@ int inFocusColor = 150;
 void setup() {
   BilIcon = loadImage("BilType.png");
   LastBilIcon = loadImage("LastBilType.png");
+  CarTire1 = loadImage("CarTire1.png");
+  CarTire2 = loadImage("CarTire2.png");
+  LastBilTire1 = loadImage("LastBilTire1.png");
+  LastBilTire2 = loadImage("LastBilTire2.png");
   //Size of the screen
   size(1000, 500);
   //The Screens background color

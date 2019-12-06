@@ -3,7 +3,6 @@ int yTT = 300;
 int lTT = 100;
 int hTT = 50;
 
-
 void TireAndTypes() {
   //CarType Box 1
   fill(boxHighlightC1);
@@ -41,6 +40,14 @@ void TireAndTypes() {
   //Car TireType Box 1
   fill(boxHighlightT1);
   rect(xTT, yTT+120, lTT, hTT);
+  //Checks for which CarType is active and displays corresponding tires
+  if (cType == 1) {  
+    CarTire1.resize(lTT, hTT);
+    image (CarTire1, xTT, yTT+120);
+  } else {
+    LastBilTire1.resize(lTT, hTT);
+    image (LastBilTire1, xTT, yTT+120);
+  }
   if (mouseX >= xTT && mouseX <= xTT+lTT && mouseY >= yTT+120 && mouseY <= yTT+120+hTT) {
     if (mousePressed) {
       tType = 0;
@@ -53,6 +60,14 @@ void TireAndTypes() {
   //Car TireType Box 2
   fill(boxHighlightT2);
   rect(xTT+150, yTT+120, lTT, hTT);
+  //Checks for which CarType is active and displays corresponding tires
+  if (cType == 1) {  
+    CarTire2.resize(lTT, hTT);
+    image (CarTire2, xTT+150, yTT+120);
+  } else {
+    LastBilTire2.resize(lTT, hTT);
+    image (LastBilTire2, xTT+150, yTT+120);
+  }
   if (mouseX >= xTT+150 && mouseX <= xTT+150+lTT && mouseY >= yTT+120 && mouseY <= yTT+120+hTT) {
     if (mousePressed) {
       tType = 1;
