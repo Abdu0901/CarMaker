@@ -7,13 +7,11 @@ void TireAndTypes() {
   BilIcon.resize(lTT, hTT);
   image (BilIcon, xTT, yTT);
  
-  if (mouseX >= xTT && mouseX <= xTT+lTT && mouseY >= yTT && mouseY <= yTT+hTT) {
-    if (mousePressed) {
+  if (mouseX >= xTT && mouseX <= xTT+lTT && mouseY >= yTT && mouseY <= yTT+hTT && mousePressed) {
       cType = 1;
       boxHighlightC1 = inFocusColor;
       boxHighlightC2 = notInFocusColor;
       println("Type LastBil Button Clicked");
-    }
   }
 
   //CarType Box 2
@@ -22,14 +20,12 @@ void TireAndTypes() {
   LastBilIcon.resize(lTT, hTT);
   image (LastBilIcon, xTT+150, yTT);
   
-  if (mouseX >= xTT+150 && mouseX <= xTT+150+lTT && mouseY >= yTT && mouseY <= yTT+hTT) {
-    if (mousePressed) {
+  if (mouseX >= xTT+150 && mouseX <= xTT+150+lTT && mouseY >= yTT && mouseY <= yTT+hTT && mousePressed) {
       cType = 0;
       boxHighlightC2 = inFocusColor;
       boxHighlightC1 = notInFocusColor;
       println("Type Car Button Clicked");
     }
-  }
 
   //Car Type Text
   fill(255);
@@ -49,14 +45,13 @@ void TireAndTypes() {
     image (LastBilTire1, xTT, yTT+120);
   }
   
-  if (mouseX >= xTT && mouseX <= xTT+lTT && mouseY >= yTT+120 && mouseY <= yTT+120+hTT) {
-    if (mousePressed) {
+  if (mouseX >= xTT && mouseX <= xTT+lTT && mouseY >= yTT+120 && mouseY <= yTT+120+hTT && mousePressed) {
       tType = 0;
       boxHighlightT1 = inFocusColor;
       boxHighlightT2 = notInFocusColor;
       println("Tire 1 Button Clicked");
     }
-  }
+  
 
   //Car TireType Box 2
   fill(boxHighlightT2);
@@ -71,13 +66,11 @@ void TireAndTypes() {
     image (LastBilTire2, xTT+150, yTT+120);
   }
   
-  if (mouseX >= xTT+150 && mouseX <= xTT+150+lTT && mouseY >= yTT+120 && mouseY <= yTT+120+hTT) {
-    if (mousePressed) {
+  if (mouseX >= xTT+150 && mouseX <= xTT+150+lTT && mouseY >= yTT+120 && mouseY <= yTT+120+hTT && mousePressed) {
       tType = 1;
       boxHighlightT2 = inFocusColor;
       boxHighlightT1 = notInFocusColor;
       println("Tire 1 Button Clicked");
-    }
   }
 
   //Car Tire Text
