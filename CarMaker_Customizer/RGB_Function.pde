@@ -1,7 +1,7 @@
 //X Position of the input boxes
 int xP = 60;
 //Y position of the input boxes
-int yP = 230;
+int yP = 60;
 int yP1 = yP+60;
 int yP2 = yP1+60;
 //Length of the input boxes
@@ -73,6 +73,6 @@ void boxesRGB () {
   fill(255);
   textSize(80); 
   textAlign(CENTER, TOP);
-  text("Car Maker 9000", (width/2), 0);
+  text("Car Maker 9000", (650), 0);
   textAlign(LEFT, BASELINE);
 }
