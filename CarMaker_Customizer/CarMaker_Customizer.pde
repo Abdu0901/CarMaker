@@ -1,5 +1,9 @@
 //Abdullah, Julius and Sebastian 3D2. Programming CarMaker Project.
 
+//Icons for the car types
+PImage BilIcon;
+PImage LastBilIcon;
+
 //3 different integers for each of the carColor's RGB values
 int cCRed = 0, cCGreen = 0, cCBlue = 0;
 
@@ -15,6 +19,8 @@ int notInFocusColor = 255;
 int inFocusColor = 150;
 
 void setup() {
+  BilIcon = loadImage("BilType.png");
+  LastBilIcon = loadImage("LastBilType.png");
   //Size of the screen
   size(1000, 500);
   //The Screens background color
