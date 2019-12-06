@@ -16,7 +16,7 @@ void boxesRGB () {
   cCBlue = numB;
 
   //Red Input Box and text
-  fill(255);
+  fill(boxHighlightR);
   rect(xP, yP, lP, hP);
   //Big red R text
   fill(255, 0, 0);
@@ -32,7 +32,7 @@ void boxesRGB () {
 
 
   //Green Input Box
-  fill(255);
+  fill(boxHighlightG);
   rect(xP, yP1, lP, hP);
   //Big green G text
   fill(0, 255, 0);
@@ -47,7 +47,7 @@ void boxesRGB () {
   }
 
   //Blue Input Box
-  fill(255);
+  fill(boxHighlightB);
   rect(xP, yP2, lP, hP);
   //Big blue B text
   fill(0, 0, 255);

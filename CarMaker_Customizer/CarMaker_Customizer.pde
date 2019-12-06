@@ -10,6 +10,8 @@ int maxTextLength = 3;
 
 boolean isRBoxInFocus = false, isGBoxInFocus = false, isBBoxInFocus = false;
 
+int boxHighlightR = 255, boxHighlightG = 255, boxHighlightB = 255;
+
 void setup() {
   //Size of the screen
   size(1000, 500);
@@ -29,18 +31,27 @@ void mousePressed() {
   if (mouseX >= xP && mouseX <= xP+lP && mouseY >= yP && mouseY <= yP+hP) {
     println("Red Box Clicked");
     isRBoxInFocus = true; 
-    isGBoxInFocus = false; 
+    boxHighlightR = 150;
+    isGBoxInFocus = false;
+    boxHighlightG = 255;
     isBBoxInFocus = false;
+    boxHighlightB = 255;
   } else if (mouseX >= xP && mouseX <= xP+lP && mouseY >= yP1 && mouseY <= yP1+hP) {
     println("Green Box Clicked");
-    isRBoxInFocus = false; 
-    isGBoxInFocus = true; 
+    isRBoxInFocus = false;
+    boxHighlightR = 255;
+    isGBoxInFocus = true;
+    boxHighlightG = 150;
     isBBoxInFocus = false;
+    boxHighlightB = 255;
   } else if (mouseX >= xP && mouseX <= xP+lP && mouseY >= yP2 && mouseY <= yP2+hP) {
     println("Blue Box Clicked");
     isRBoxInFocus = false; 
-    isGBoxInFocus = false; 
+    boxHighlightR = 255;
+    isGBoxInFocus = false;
+    boxHighlightG = 255;
     isBBoxInFocus = true;
+    boxHighlightB = 150;
   }
 }
 
