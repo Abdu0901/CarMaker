@@ -1,3 +1,4 @@
+//TireType and CarType
 int tType = 0, cType=1;
 int tSize = 50;
 
@@ -27,8 +28,7 @@ class tire {
   }
 }
 
-//DRAW FUNKTION
-
+//Function that Draws the Cars
 void DrawCar() {
   translate(400, 120);
   if (cType == 0) {

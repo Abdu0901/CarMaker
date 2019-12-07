@@ -21,6 +21,7 @@ int boxHighlightC1 = 255, boxHighlightC2 = 255, boxHighlightT1 = 255, boxHighlig
 int notInFocusColor = 255, inFocusColor = 150;
 
 void setup() {
+  //Loads all images to be used in the program
   BilIcon = loadImage("BilType.png");
   LastBilIcon = loadImage("LastBilType.png");
   CarTire1 = loadImage("CarTire1.png");
@@ -38,6 +39,7 @@ void draw() {
   //Car background box
   fill(255);
   rect(350, 170, 600, 300);
+  //Runs all the functions
   boxesRGB();
   TireAndTypes();
   DrawCar();
@@ -45,37 +47,42 @@ void draw() {
 
 //Function to detect mousepressed in a box
 void mousePressed() {
-
-  //red box
+  //Checks if Red box is clicked and sets it in focus
   if (mouseX >= xP && mouseX <= xP+lP && mouseY >= yP && mouseY <= yP+hP) {
     println("Red Box Clicked");
-    isRBoxInFocus = true; isGBoxInFocus = false; isBBoxInFocus = false;
-    boxHighlightR = inFocusColor; boxHighlightG = notInFocusColor; boxHighlightB = notInFocusColor;
-    
+    isRBoxInFocus = true; 
+    isGBoxInFocus = false; 
+    isBBoxInFocus = false;
+    boxHighlightR = inFocusColor; 
+    boxHighlightG = notInFocusColor; 
+    boxHighlightB = notInFocusColor;
     stringR = ""; //when box is clicked new colour value can be typed
-    
-    
-    //green box
-  } else if (mouseX >= xP && mouseX <= xP+lP && mouseY >= yP1 && mouseY <= yP1+hP) {
+  } //Checks if Green box is clicked and sets it in focus
+  else if (mouseX >= xP && mouseX <= xP+lP && mouseY >= yP1 && mouseY <= yP1+hP) {
     println("Green Box Clicked");
-    isRBoxInFocus = false; isGBoxInFocus = true; isBBoxInFocus = false;
-    boxHighlightR = notInFocusColor; boxHighlightG = inFocusColor; boxHighlightB = notInFocusColor;
-
+    isRBoxInFocus = false; 
+    isGBoxInFocus = true; 
+    isBBoxInFocus = false;
+    boxHighlightR = notInFocusColor; 
+    boxHighlightG = inFocusColor; 
+    boxHighlightB = notInFocusColor;
     stringG = "";
-    
-    
-    //bluebox
-  } else if (mouseX >= xP && mouseX <= xP+lP && mouseY >= yP2 && mouseY <= yP2+hP) {
+  } //Checks if Green box is clicked and sets it in focus
+  else if (mouseX >= xP && mouseX <= xP+lP && mouseY >= yP2 && mouseY <= yP2+hP) {
     println("Blue Box Clicked");
-    isRBoxInFocus = false; isGBoxInFocus = false; isBBoxInFocus = true;
-    boxHighlightR = notInFocusColor; boxHighlightG = notInFocusColor; boxHighlightB = inFocusColor;
-
+    isRBoxInFocus = false; 
+    isGBoxInFocus = false; 
+    isBBoxInFocus = true;
+    boxHighlightR = notInFocusColor; 
+    boxHighlightG = notInFocusColor; 
+    boxHighlightB = inFocusColor;
     stringB = "";
   }
 }
 
 //Function to input numbers into boxes
 void keyPressed() {
+  //Makes the Box in Focus take input from 0-9 only
   if (isRBoxInFocus) {
     if ( key >= '0' && key <= '9' && maxTextLength > stringR.length()) {
       stringR += key;
@@ -86,7 +93,6 @@ void keyPressed() {
       deselectHighlights();
     }
   }
-  
   if (isGBoxInFocus) {
     if ( key >= '0' && key <= '9' && maxTextLength > stringG.length()) {
       stringG += key;
@@ -97,7 +103,6 @@ void keyPressed() {
       deselectHighlights();
     }
   }
-  
   if (isBBoxInFocus) {
     if ( key >= '0' && key <= '9' && maxTextLength > stringB.length()) {
       stringB += key;
@@ -110,6 +115,7 @@ void keyPressed() {
   }
 }
 
+//Deselects the highlights and inboxfocus when an input has been added
 void deselectHighlights() {
   isRBoxInFocus = false;
   boxHighlightR = notInFocusColor;
