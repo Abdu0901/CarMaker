@@ -8,7 +8,7 @@ class car1 {
   int cCR, cCG, cCB, cType; //carColourRed, carColourGreen, carColourBlue, carType
   tire cTire; //erklær objekt type (fra class tire)
 
-  car1(int cR, int cG, int cB, int cT, int tT, int sT) { //colourRed, colourGreen, colourBlue, tireTypeSize
+  car1(int cR, int cG, int cB, int cT, int tT, int sT) { //colourRed, colourGreen, colourBlue, carType, sizeTire
     cCR = cR;
     cCG = cG;
     cCB = cB;
